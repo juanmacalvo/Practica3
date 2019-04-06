@@ -27,7 +27,7 @@ public class NewHibernateUtil {
             // Create the SessionFactory from standard (hibernate.cfg.xml) 
             // config file.
             //sessionFactory = new AnnotationConfiguration().configure().buildSessionFactory();
-            sessionFactory = new Configuration().configure("/hib.cfg.xml").buildSessionFactory(); 
+            sessionFactory = new Configuration().configure("/hibernate.cfg.xml").buildSessionFactory(); 
         } catch (Throwable ex) {
             // Log the exception. 
             java.util.logging.Logger.getLogger("org.hibernate").setLevel(java.util.logging.Level.OFF);   
