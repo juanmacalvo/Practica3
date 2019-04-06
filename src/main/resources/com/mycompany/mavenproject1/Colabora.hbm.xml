@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 06-abr-2019 2:03:50 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.mycompany.mavenproject1.Colabora" table="colabora" catalog="practica3" optimistic-lock="version">
+        <composite-id name="id" class="com.mycompany.mavenproject1.ColaboraId">
+            <key-property name="codExperto" type="string">
+                <column name="codExperto" length="4" />
+            </key-property>
+            <key-property name="codCaso" type="string">
+                <column name="codCaso" length="4" />
+            </key-property>
+            <key-property name="fecha" type="date">
+                <column name="fecha" length="10" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="casoPolicial" class="com.mycompany.mavenproject1.CasoPolicial" update="false" insert="false" fetch="select">
+            <column name="codCaso" length="4" not-null="true" />
+        </many-to-one>
+        <many-to-one name="experto" class="com.mycompany.mavenproject1.Experto" update="false" insert="false" fetch="select">
+            <column name="codExperto" length="4" not-null="true" />
+        </many-to-one>
+        <property name="descripcionColaboracion" type="string">
+            <column name="descripcion_colaboracion" length="100" />
+        </property>
+    </class>
+</hibernate-mapping>
