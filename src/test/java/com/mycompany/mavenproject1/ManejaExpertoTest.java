@@ -18,22 +18,22 @@ import static org.junit.Assert.*;
  * @author JUANM
  */
 public class ManejaExpertoTest {
-    
+
     public ManejaExpertoTest() {
     }
-    
+
     @BeforeClass
     public static void setUpClass() {
     }
-    
+
     @AfterClass
     public static void tearDownClass() {
     }
-    
+
     @Before
     public void setUp() {
     }
-    
+
     @After
     public void tearDown() {
     }
@@ -81,11 +81,17 @@ public class ManejaExpertoTest {
     @org.junit.Test
     public void testGuardaExperto() {
         System.out.println("guardaExperto");
-        Experto experto = null;
+        String codExperto="E100";
+        String nombre="pepe";
+        String pais="esp";
+        Character sexo='M';
+        String especialidad="policia";
+        Experto experto = new Experto(codExperto, nombre, pais, sexo, especialidad, null);
+        
         ManejaExperto instance = new ManejaExperto();
+        instance.iniciaOperacion();
         instance.guardaExperto(experto);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        instance.finalizaOperacion();
     }
-    
+
 }
