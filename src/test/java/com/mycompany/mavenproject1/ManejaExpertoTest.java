@@ -129,7 +129,7 @@ public class ManejaExpertoTest {
     
     @org.junit.Test
     public void testGuardaExperto4() {
-        System.out.println("guardaExperto3");
+        System.out.println("guardaExperto4");
         String codExperto = "E666";
         String nombre = "juan";
         String pais = "esp";
