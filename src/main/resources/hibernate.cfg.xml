@@ -42,7 +42,7 @@ Contributor(s):
 <hibernate-configuration>
   <session-factory>
     <property name="hibernate.connection.username">root</property>
-    <property name="hibernate.connection.url">jdbc:mysql://localhost:1527/practica3</property>
+    <property name="hibernate.connection.url">jdbc:derby://localhost:1527/practica3</property>
     <mapping resource="com/mycompany/mavenproject1/CasoPolicial.hbm.xml"/>
     <mapping resource="com/mycompany/mavenproject1/Experto.hbm.xml"/>
     <mapping resource="com/mycompany/mavenproject1/Colabora.hbm.xml"/>
