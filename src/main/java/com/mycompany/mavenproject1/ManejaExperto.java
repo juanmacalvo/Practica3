@@ -54,4 +54,50 @@ public class ManejaExperto {
             finalizaOperacion();
         }
     }
+    
+    public void eliminaExperto(Experto experto) {
+        try {
+            iniciaOperacion();
+            sesion.delete(experto);
+            System.out.println("Experto eliminado correctamente");
+        } catch (HibernateException he) {
+            manejaExcepcion(he);
+            throw he;
+        } finally {
+            finalizaOperacion();
+        }
+    }
+    
+    public void actualizaExperto(Experto experto) {
+        try {
+            iniciaOperacion();
+            sesion.update(experto);
+            System.out.println("Experto actualizado correctamente");
+        } catch (HibernateException he) {
+            manejaExcepcion(he);
+            throw he;
+        } finally {
+            finalizaOperacion();
+        }
+    }
+    
+    public void obtenerExperto(Experto experto) {
+        try {
+            iniciaOperacion();
+            
+            Query query = sesion.createQuery("select e.nombre from Experto as e");
+            
+            List<String> listaResultados = query.list();
+            
+            for (int i = 0; i < listaResultados.size(); i++) {
+                System.out.println("Nombre "+i+": "+listaResultados.get(i));
+            }
+        } catch (HibernateException he) {
+            manejaExcepcion(he);
+            throw he;
+        } finally {
+            finalizaOperacion();
+        }
+        
+    }
 }
