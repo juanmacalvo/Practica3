@@ -48,30 +48,6 @@ public class ManejaExpertoTest {
         instance.iniciaOperacion();
     }
 
-    /**
-     * Test of finalizaOperacion method, of class ManejaExperto.
-     */
-    @org.junit.Test
-    public void testFinalizaOperacion() {
-        System.out.println("finalizaOperacion");
-        ManejaExperto instance = new ManejaExperto();
-        instance.finalizaOperacion();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of manejaExcepcion method, of class ManejaExperto.
-     */
-    @org.junit.Test
-    public void testManejaExcepcion() {
-        System.out.println("manejaExcepcion");
-        HibernateException he = null;
-        ManejaExperto instance = new ManejaExperto();
-        instance.manejaExcepcion(he);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
 
     /**
      * Test of guardaExperto method, of class ManejaExperto.
@@ -141,6 +117,59 @@ public class ManejaExpertoTest {
 
         instance.iniciaOperacion();
         instance.guardaExperto(experto);
+
+    }
+    
+    
+    @org.junit.Test
+    public void eliminaExperto() {
+        System.out.println("guardaExperto4");
+        String codExperto = "E666";
+        String nombre = "juan";
+        String pais = "esp";
+        Character sexo = 'M';
+        String especialidad = "policia";
+        Experto experto = new Experto(codExperto, nombre, pais, especialidad);
+
+        ManejaExperto instance = new ManejaExperto();
+
+        instance.iniciaOperacion();
+        instance.eliminaExperto(experto);
+
+    }
+    
+     @org.junit.Test
+    public void actualizaExperto() {
+        System.out.println("guardaExperto4");
+        String codExperto = "E666";
+        String nombre = "juan";
+        String pais = "esp";
+        Character sexo = 'M';
+        String especialidad = "policia";
+        Experto experto = new Experto(codExperto, nombre, pais, especialidad);
+
+        ManejaExperto instance = new ManejaExperto();
+
+        instance.iniciaOperacion();
+        instance.actualizaExperto(experto);
+
+    }
+    
+    
+     @org.junit.Test
+    public void obtenerExperto() {
+        System.out.println("guardaExperto4");
+        String codExperto = "E666";
+        String nombre = "juan";
+        String pais = "esp";
+        Character sexo = 'M';
+        String especialidad = "policia";
+        Experto experto = new Experto(codExperto, nombre, pais, especialidad);
+
+        ManejaExperto instance = new ManejaExperto();
+
+        instance.iniciaOperacion();
+        instance.obtenerExperto(experto);
 
     }
 
