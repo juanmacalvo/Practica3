@@ -100,4 +100,22 @@ public class ManejaExperto {
         }
         
     }
+    
+        public void listaConParametro(String keyword) throws HibernateException{
+        iniciaOperacion();
+        String hq1 = "from Experto e where e.especialidad = :keyword";
+
+        Query query =sesion.createQuery(hq1);
+        query.setParameter("keyword",keyword);
+
+        List<Experto> listExpertos = query.list();
+
+        for(Experto aExperto : listExpertos) {
+            System.out.println(aExperto.getNombre());
+        }
+
+        finalizaOperacion();
+
+
+    }
 }
