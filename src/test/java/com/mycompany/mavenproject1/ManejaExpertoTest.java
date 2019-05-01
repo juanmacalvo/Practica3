@@ -64,7 +64,6 @@ public class ManejaExpertoTest {
 
         ManejaExperto instance = new ManejaExperto();
 
-        instance.iniciaOperacion();
         instance.guardaExperto(experto);
 
     }
@@ -81,7 +80,6 @@ public class ManejaExpertoTest {
 
         ManejaExperto instance = new ManejaExperto();
 
-        instance.iniciaOperacion();
         instance.guardaExperto(experto);
 
     }
@@ -98,7 +96,6 @@ public class ManejaExpertoTest {
 
         ManejaExperto instance = new ManejaExperto();
 
-        instance.iniciaOperacion();
         instance.guardaExperto(experto);
 
     }
@@ -122,9 +119,9 @@ public class ManejaExpertoTest {
     
     
     @org.junit.Test
-    public void eliminaExperto() {
+    public void testGuardaExperto5() {
         System.out.println("guardaExperto4");
-        String codExperto = "E666";
+        String codExperto = "6";
         String nombre = "juan";
         String pais = "esp";
         Character sexo = 'M';
@@ -133,44 +130,13 @@ public class ManejaExpertoTest {
 
         ManejaExperto instance = new ManejaExperto();
 
-        instance.iniciaOperacion();
-        instance.eliminaExperto(experto);
 
-    }
-    
-     @org.junit.Test
-    public void actualizaExperto() {
-        System.out.println("guardaExperto4");
-        String codExperto = "E666";
-        String nombre = "juan";
-        String pais = "esp";
-        Character sexo = 'M';
-        String especialidad = "policia";
-        Experto experto = new Experto(codExperto, nombre, pais, especialidad);
-
-        ManejaExperto instance = new ManejaExperto();
-
-        instance.iniciaOperacion();
-        instance.actualizaExperto(experto);
+        instance.guardaExperto(experto);
 
     }
     
     
-     @org.junit.Test
-    public void obtenerExperto() {
-        System.out.println("guardaExperto4");
-        String codExperto = "E666";
-        String nombre = "juan";
-        String pais = "esp";
-        Character sexo = 'M';
-        String especialidad = "policia";
-        Experto experto = new Experto(codExperto, nombre, pais, especialidad);
+    
 
-        ManejaExperto instance = new ManejaExperto();
-
-        instance.iniciaOperacion();
-        instance.obtenerExperto(experto);
-
-    }
 
 }
